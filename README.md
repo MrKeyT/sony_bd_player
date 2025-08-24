@@ -60,3 +60,12 @@ I've also added a `PowerOn` command to that list, that implements WakeOnLAN to t
 
 ### Disclaimer
 This is an experimental and non-official library developed just for fun, I'm not affiliated with Sony in any way. This software is distributed under the Apache 2.0 License: http://www.apache.org/licenses/LICENSE-2.0
+
+### DLNA BD recorder cleanup
+A basic script `dlna_cleanup.js` discovers DLNA/UPnP media servers on the local network, lists their content and removes items older than a configurable age.
+
+Run with:
+```
+MAX_AGE_DAYS=30 node dlna_cleanup.js
+```
+By default entries older than 30 days are deleted. Adjust `MAX_AGE_DAYS` to fit your needs.
